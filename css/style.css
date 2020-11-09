@@ -1,0 +1,149 @@
+body {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 30px 0;
+}
+
+h2 {
+  color: #969696;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+}
+
+span {
+  color: #2b2b2b;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.header {
+  align-items: center;
+  background: url("../images/pattern-bg.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+  height: 3.4rem;
+  z-index: 1;
+}
+.search__input {
+  border: none;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  color: #2b2b2b;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 25px;
+  height: 100%;
+  width: 497px;
+}
+.search__input:focus {
+  outline: none;
+}
+.search__btn {
+  background: #000;
+  border: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: white;
+  transition: 0.2s;
+  height: 58px;
+  width: 58px;
+}
+.search__btn:hover {
+  background: #2b2b2b;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.search__btn:focus {
+  outline: none;
+}
+
+.info {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 35px 70px -35px rgba(73, 73, 73, 0.3);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding: 40px 30px;
+  width: 65%;
+  z-index: 1;
+}
+.info__details {
+  max-height: 100px;
+  width: 25%;
+}
+.info div:nth-child(2), .info div:nth-child(3), .info div:nth-child(4) {
+  border-left: 1px solid #ddd;
+  padding-left: 30px;
+}
+
+.validation-msg {
+  color: #c9564e;
+  position: absolute;
+  top: 175px;
+  z-index: 1;
+}
+
+.invalid {
+  border: 2px solid #c9564e;
+  background: #fff1f0;
+}
+
+#mapid {
+  height: 70vh;
+  width: 100%;
+  z-index: 0;
+}
+
+@media screen and (max-width: 992px) {
+  h2 {
+    font-size: 10px;
+  }
+
+  span {
+    font-size: 20px;
+  }
+
+  .search {
+    width: 95%;
+  }
+
+  .info {
+    align-items: center;
+    gap: 25px;
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding: 20px 0;
+    width: 95%;
+  }
+  .info__details {
+    min-width: 200px;
+    padding: 0;
+  }
+  .info div:nth-child(2), .info div:nth-child(3), .info div:nth-child(4) {
+    border: none;
+    padding: 0;
+  }
+}
